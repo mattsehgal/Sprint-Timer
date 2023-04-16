@@ -1,0 +1,90 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <title>Sprint Timer</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <h1>Sprint Timer</h1>-->
+<!--    <form action="{{ url_for('video') }}" method="post">-->
+<!--      <input type="radio" id="stream" name="video_type" value="STREAM">-->
+<!--      <label for="stream">Use Camera</label><br>-->
+<!--      <input type="radio" id="upload" name="video_type" value="UPLOAD">-->
+<!--      <label for="upload">Upload Video</label><br><br>-->
+<!--      <input type="submit" value="Submit">-->
+<!--    </form>-->
+<!--  </body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprint Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        label, input {
+            margin: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition-duration: 0.4s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0069D9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sprint Timer</h1>
+    <form action="{{ url_for('video') }}" method="post">
+        <div class="radio-group">
+            <input type="radio" id="stream" name="video_type" value="STREAM">
+            <label for="stream">Use Camera</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="upload" name="video_type" value="UPLOAD">
+            <label for="upload">Upload Video</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
